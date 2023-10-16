@@ -1,0 +1,12 @@
+class Solution {
+    public List<Integer> getRow(int rowIndex) {
+        ArrayList<Integer> li=new ArrayList<>();
+       li.add(1);
+       for(int i=1;i<=rowIndex;i++)
+       {
+           long cur=(long) li.get(i-1)*(rowIndex-i+1)/i;
+           li.add((int) cur);
+       }
+       return li;
+    }
+}
